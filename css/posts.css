@@ -1,0 +1,45 @@
+.imgstyle {
+  border-radius: 4px;
+  max-width: 600px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.data-container {
+  display: grid;
+  gap: 4rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 78px;
+  padding: 4rem;
+  /* background: rgba(65, 147, 223, 0.2); */
+  font-family: "Questrial";
+  place-content: center;
+  color: #1f1f37;
+}
+
+.data-container h1 {
+  font-size: 1.4rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  color: #1f1f37;
+}
+
+.container span {
+  color: #5d5e76;
+  font-size: 1.1rem;
+}
+
+.categories {
+  display: flex;
+  gap: 1.4rem;
+}

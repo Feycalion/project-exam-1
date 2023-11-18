@@ -1,0 +1,93 @@
+main {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 8rem;
+  font-family: "Questrial";
+  font-size: 1rem;
+  color: #1f1f37;
+  bottom: 20%;
+}
+
+.names {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 246px;
+  gap: 0.6rem;
+}
+
+.text-snippet {
+  display: flex;
+  flex-direction: column;
+  max-width: 316px;
+  gap: 1rem;
+}
+
+.text-snippet h2 {
+  font-size: 1.2rem;
+}
+
+.text-snippet p {
+  line-height: 120%;
+}
+
+.text-snippet img {
+  border-radius: 900px;
+  padding: 4rem 2rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  font-family: "Poppins";
+  height: 40px;
+  border: 1px solid #d2675e;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: 1.4px solid #d2675e;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+textarea:focus {
+  outline: 1.4px solid #d2675e;
+}
+
+::placeholder {
+  font-family: "Poppins";
+  color: #9999b1;
+}
+
+input[type="submit"] {
+  background-color: #d2675e;
+  color: #fcfbf8;
+  padding: 8px 12px;
+  border: 1px solid #d2675e;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: #fcfbf8;
+  color: #d2675e;
+  border: 1px solid #d2675e;
+}

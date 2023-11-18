@@ -1,4 +1,4 @@
-const url = "http://flower-power.local/wp-json/wp/v2/posts";
+const url = "http://flower-power.local/wp-json/wp/v2/posts?per_page=20";
 const categoriesUrl = "http://flower-power.local/wp-json/wp/v2/categories";
 
 async function getData() {
@@ -29,12 +29,6 @@ function printData(posts, categories) {
 
     dataContainer.appendChild(container);
 
-    // title
-    const recipeName = document.createElement("h1");
-    recipeName.innerText = posts[i].title.rendered;
-    recipeName.classList.add("txtstyle");
-    container.appendChild(recipeName);
-
     // image
     const recipeImage = document.createElement("img");
     recipeImage.src = posts[i].yoast_head_json.og_image[0].url;
@@ -56,11 +50,13 @@ function printData(posts, categories) {
 
     container.appendChild(categoriesContainer);
 
-    // description
-    const recipeDesc = document.createElement("p");
-    recipeDesc.innerHTML = posts[i].yoast_head_json.description;
-    recipeDesc.classList.add("txtstyle");
-    container.appendChild(recipeDesc);
+    // title
+    const recipeName = document.createElement("h1");
+    recipeName.innerText = posts[i].title.rendered;
+    recipeName.classList.add("txtstyle");
+    container.appendChild(recipeName);
+
+    dataContainer.appendChild(container);
   }
 }
 

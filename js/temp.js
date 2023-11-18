@@ -31,6 +31,12 @@ container.appendChild(recipeImage);
 
 // entire blog post
 const recipePost = document.createElement("p");
-recipePost.innerHTML = info[i].excerpt.rendered;
+recipePost.innerHTML = info[i].content.rendered;
 recipePost.classList.add("txtstyle");
 container.appendChild(recipePost);
+
+// description
+const recipeDesc = document.createElement("p");
+recipeDesc.innerHTML = posts[i].yoast_head_json.description;
+recipeDesc.classList.add("txtstyle");
+container.appendChild(recipeDesc);

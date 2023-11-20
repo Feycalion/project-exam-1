@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/carousel.css" />
-    <link rel="stylesheet" href="./css/posts.css" />
+    <link rel="stylesheet" href="./css/extras.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +32,7 @@
       <nav>
         <ul class="navlinks">
           <li><a href="index.html">HOME</a></li>
-          <li><a href="allblogposts.html">BLOG</a></li>
+          <li><a href="blog.html">BLOG</a></li>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
@@ -58,8 +58,34 @@
 
       <!-- <h1 id="recipe-title"></h1>
         <img id="recipe-image" class="imgstyle" alt="" /> -->
-      <div class="data-container"></div>
+
+      <!-- TRENDING -->
+      <div class="trending-recipes"></div>
     </main>
+
+    <!-- NEWSLETTER -->
+
+    <div class="newsletter">
+      <div class="newsletter-wrapper">
+        <div class="newsletter-text">
+          <h2>NEVER MISS A RECIPE!</h2>
+          <p>Subscribe to our newsletter</p>
+        </div>
+        <div class="input-wrapper">
+          <label for="email">Email</label>
+          <input
+            placeholder="Example@gmail.com"
+            type="text"
+            id="email"
+            name="email"
+          />
+          <div class="submit-button">
+            <input type="submit" value="Subscribe" />
+          </div>
+        </div>
+        <span id="emailError" class="error"></span><br />
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>

@@ -1,0 +1,55 @@
+.data-container {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 78px;
+  padding: 6rem;
+  font-family: "Questrial";
+  place-content: center;
+  color: #1f1f37;
+}
+
+.data-container p {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Image Modal */
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(40, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.modal-image {
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+#recipe-post img {
+  display: none;
+}

@@ -18,10 +18,17 @@
   font-family: "Questrial";
   place-content: center;
   color: #1f1f37;
+  margin: 4rem 0;
 }
 
 .data-container h1 {
   font-size: 1.4rem;
+}
+
+.data-container p {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  line-height: 1.4rem;
 }
 
 .container {

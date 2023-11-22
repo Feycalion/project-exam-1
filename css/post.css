@@ -53,3 +53,32 @@
 #recipe-post img {
   display: none;
 }
+
+/* Media queries */
+
+@media (max-width: 1140px) {
+  .data-container {
+    padding: 4rem;
+    border-radius: 24px;
+  }
+
+  .data-container p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .data-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+  }
+
+  .modal {
+    gap: 1rem;
+  }
+
+  .modal-image {
+    min-width: 70%;
+    min-height: 70%;
+  }
+}

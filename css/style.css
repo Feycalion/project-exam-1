@@ -11,15 +11,18 @@ html {
 body {
   min-height: 100vh;
   background-color: #fcfbf8;
-  /* min-height: 100vh;
-  overflow-x: hidden; */
 }
 
 main {
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
-.container {
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
   max-width: 1200px;
   margin: 0 auto;
 }

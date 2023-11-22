@@ -10,10 +10,10 @@ let maxSlide = slides.length - 1;
 const nextSlide = document.querySelector(".btn-next");
 
 nextSlide.addEventListener("click", function () {
-  if (curSlide === 0) {
-    curSlide = maxSlide;
+  if (curSlide === maxSlide) {
+    curSlide = 0;
   } else {
-    curSlide--;
+    curSlide++;
   }
 
   slides.forEach((slide, indx) => {
@@ -24,10 +24,10 @@ nextSlide.addEventListener("click", function () {
 const prevSlide = document.querySelector(".btn-prev");
 
 prevSlide.addEventListener("click", function () {
-  if (curSlide === maxSlide) {
-    curSlide = 0;
+  if (curSlide === 0) {
+    curSlide = maxSlide;
   } else {
-    curSlide++;
+    curSlide--;
   }
 
   slides.forEach((slide, indx) => {

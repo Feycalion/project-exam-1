@@ -22,8 +22,9 @@
 .text-snippet {
   display: flex;
   flex-direction: column;
-  max-width: 316px;
+  max-width: 346px;
   gap: 1rem;
+  padding: 0.8rem;
 }
 
 .text-snippet h2 {
@@ -50,7 +51,7 @@ textarea {
   height: 40px;
   border: 1px solid #d2675e;
   padding: 8px;
-  border-radius: 3px;
+  border-radius: 0.2rem;
 }
 
 input:focus {
@@ -75,7 +76,6 @@ input[type="submit"] {
   background-color: #d2675e;
   color: #fcfbf8;
   padding: 8px 12px;
-  border: 1px solid #d2675e;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -84,4 +84,45 @@ input[type="submit"]:hover {
   background-color: #fcfbf8;
   color: #d2675e;
   border: 1px solid #d2675e;
+}
+
+.error {
+  color: red;
+}
+
+/* Media queries */
+
+@media (max-width: 2000px) {
+}
+
+@media (max-width: 1080px) {
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem;
+  }
+  text-snippet,
+  .input-wrapper {
+    max-width: 160%;
+  }
+}
+
+@media (max-width: 768px) {
+  .names {
+    flex-direction: column;
+  }
+
+  .text-snippet img {
+    padding: 2rem;
+  }
+
+  .text-snippet,
+  .input-wrapper {
+    max-width: 100%;
+  }
 }

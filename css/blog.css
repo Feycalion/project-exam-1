@@ -14,7 +14,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   border-radius: 78px;
   padding: 4rem;
-  /* background: rgba(65, 147, 223, 0.2); */
   font-family: "Questrial";
   place-content: center;
   color: #1f1f37;
@@ -49,4 +48,62 @@
 .categories {
   display: flex;
   gap: 1.4rem;
+}
+
+/* Button */
+
+.load-more-btn {
+  font-family: "Poppins";
+  background-color: #d2675e;
+  color: #fcfbf8;
+  border: 1px solid #d2675e;
+  border-radius: 0.2rem;
+  padding: 8px 12px;
+  margin: 0 0 10rem 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.load-more-btn:hover {
+  background-color: #fcfbf8;
+  color: #d2675e;
+  border: 1px solid #d2675e;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .imgstyle {
+    height: 150px;
+  }
+
+  .data-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .data-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .data-container p {
+    font-size: 1rem;
+  }
+
+  .container {
+    gap: 0.4rem;
+  }
+
+  .container span {
+    font-size: 1rem;
+  }
+
+  .categories {
+    gap: 1rem;
+  }
+
+  .load-more-btn {
+    margin-bottom: 4rem;
+  }
 }

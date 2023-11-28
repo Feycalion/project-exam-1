@@ -1,7 +1,7 @@
 async function getData() {
-  const url = `http://anjakvernenes.no/wp-json/wp/v2/posts?per_page=9&offset=0`;
+  const url = `https://anjakvernenes.no/wp-json/wp/v2/posts?per_page=9&offset=0`;
 
-  const categoriesUrl = "http://anjakvernenes.no/wp-json/wp/v2/categories";
+  const categoriesUrl = "https://anjakvernenes.no/wp-json/wp/v2/categories";
 
   const [postsResponse, categoriesResponse] = await Promise.all([
     fetch(url),

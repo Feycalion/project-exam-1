@@ -1,8 +1,8 @@
 let postIds = [76, 110, 107];
 
 async function getData() {
-  const postsUrl = "http://anjakvernenes.no/wp-json/wp/v2/posts";
-  const categoriesUrl = "http://anjakvernenes.no/wp-json/wp/v2/categories";
+  const postsUrl = "https://anjakvernenes.no/wp-json/wp/v2/posts";
+  const categoriesUrl = "https://anjakvernenes.no/wp-json/wp/v2/categories";
 
   const postsResponse = await fetch(`${postsUrl}?include=${postIds.join(",")}`);
   const categoriesResponse = await fetch(categoriesUrl);

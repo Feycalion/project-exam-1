@@ -3,7 +3,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 async function getPostsByID(productID) {
-  const url = "http://anjakvernenes.no/wp-json/wp/v2/posts/" + id;
+  const url = "https://anjakvernenes.no/wp-json/wp/v2/posts/" + id;
   const response = await fetch(url);
   const post = await response.json();
 

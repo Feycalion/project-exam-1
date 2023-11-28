@@ -5,9 +5,9 @@ let offsetValue = 0;
 let postLimit = 9;
 
 async function getData() {
-  const url = `http://anjakvernenes.no/wp-json/wp/v2/posts?per_page=${postLimit}&offset=${offsetValue}`;
+  const url = `https://anjakvernenes.no/wp-json/wp/v2/posts?per_page=${postLimit}&offset=${offsetValue}`;
 
-  const categoriesUrl = "http://anjakvernenes.no/wp-json/wp/v2/categories";
+  const categoriesUrl = "https://anjakvernenes.no/wp-json/wp/v2/categories";
 
   const [postsResponse, categoriesResponse] = await Promise.all([
     fetch(url),

@@ -2,6 +2,11 @@ header {
   background-color: #ad3745;
 }
 
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
 .blogtitle {
   padding: 1.4rem;
   display: flex;

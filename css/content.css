@@ -32,7 +32,7 @@
 }
 
 .text-wrapper h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 200;
   white-space: nowrap;
 }
@@ -87,7 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .newsletter-wrapper {
@@ -155,7 +155,6 @@ input[type="submit"]:hover {
   font-family: "Questrial";
   color: #1f1f37;
   line-height: 2rem;
-  font-size: 1.2rem;
   margin: 8rem 0;
 }
 

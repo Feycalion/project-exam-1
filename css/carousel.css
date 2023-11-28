@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   font-family: "Questrial";
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 0 3rem;
 }
 
@@ -76,7 +76,7 @@
 
 .container span {
   color: #5d5e76;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .container h1 {
@@ -94,7 +94,7 @@
   gap: 1.4rem;
 }
 
-.btn svg {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,20 +106,19 @@
   z-index: 10px;
   cursor: pointer;
   color: #ad3745;
-  font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
 
-.btn svg:hover {
+.btn:hover {
   transform: scale(1.1);
 }
 
-.btn-prev svg {
+.btn-prev {
   top: 40%;
   left: 2px;
 }
 
-.btn-next svg {
+.btn-next {
   top: 40%;
   right: 2px;
 }

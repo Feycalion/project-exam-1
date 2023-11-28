@@ -1,4 +1,4 @@
-const carouselContainer = document.querySelector(".carousel-container");
+const carouselContainer = document.querySelector(".carousel");
 const slides = document.querySelectorAll(".slide");
 
 slides.forEach((slide, indx) => {

@@ -1,6 +1,6 @@
 footer {
   font-family: "Poppins";
-  background-color: #d2675e;
+  background-color: #ad3745;
   color: #fcfbf8;
   padding: 2.4rem;
   display: flex;
@@ -44,4 +44,26 @@ footer a {
   display: flex;
   gap: 1.4rem;
   cursor: pointer;
+}
+
+/* Media queries */
+
+@media (max-width: 767px) {
+  footer {
+    padding: 1.6rem;
+    text-align: center;
+  }
+
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer li {
+    padding: 0.8rem;
+  }
+
+  .mediaicons {
+    gap: 1rem;
+  }
 }

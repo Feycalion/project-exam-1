@@ -1,3 +1,75 @@
+/* Seasonal */
+
+.seasonal-container {
+  width: 100%;
+  height: auto;
+  background-color: #ffe29c;
+  display: flex;
+  justify-content: center;
+  color: #1f1f37;
+  font-family: "Poppins";
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+.seasonal-rec {
+  max-width: 1200px;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.seasonal-text,
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+.text-wrapper h2 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.text-wrapper {
+  gap: 2rem;
+}
+
+.read-more {
+  font-family: "Questrial";
+  font-size: 1.2rem;
+  text-decoration: underline;
+  line-height: 1.4rem;
+}
+
+.seasonal-rec img {
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Trending */
+
+.trending-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 486px;
+  position: relative;
+  margin: 6rem auto;
+}
+
+/* Cont. on carousel.css */
+
 /* Newsletter */
 
 .newsletter {
@@ -36,13 +108,13 @@ input,
 textarea {
   font-family: "Poppins";
   height: 40px;
-  border: 1px solid #d2675e;
+  border: 1px solid #ad3745;
   padding: 0.4rem;
   border-radius: 3px;
 }
 
 input:focus {
-  outline: 1.4px solid #d2675e;
+  outline: 1.4px solid #ad3745;
 }
 
 textarea {
@@ -51,7 +123,7 @@ textarea {
 }
 
 textarea:focus {
-  outline: 1.4px solid #d2675e;
+  outline: 1.4px solid #ad3745;
 }
 
 ::placeholder {
@@ -60,18 +132,18 @@ textarea:focus {
 }
 
 input[type="submit"] {
-  background-color: #d2675e;
+  background-color: #ad3745;
   color: #fcfbf8;
   padding: 0.4rem 1rem;
-  border: 1px solid #d2675e;
+  border: 1px solid #ad3745;
   cursor: pointer;
   transition: 0.4s;
 }
 
 input[type="submit"]:hover {
   background-color: #fcfbf8;
-  color: #d2675e;
-  border: 1px solid #d2675e;
+  color: #ad3745;
+  border: 1px solid #ad3745;
 }
 
 /* About */
@@ -140,5 +212,17 @@ input[type="submit"]:hover {
 
   .credit img {
     height: 3rem;
+  }
+}
+
+@media (max-width: 1022px) {
+  .newsletter {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .newsletter-wrapper {
+    flex-direction: column;
+    gap: 2rem;
   }
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Duchess Delights</title>
+    <script defer src="./js/menu.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -19,11 +20,29 @@
   <body>
     <!-- HEADER -->
     <header>
-      <div class="blogtitle">
-        <a href="index.html"
-          >DUCHESS DELIGHTS
-          <p>delicacies made easy</p></a
-        >
+      <div class="header-content">
+        <div class="blogtitle">
+          <a href="index.html"
+            >DUCHESS DELIGHTS
+            <p>delicacies made easy</p></a
+          >
+        </div>
+
+        <!-- BURGER MENU -->
+        <div class="burger-menu" onclick="toggleNav()">
+          <svg
+            width="46"
+            height="46"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M27 18C28.1935 18 29.3381 17.5259 30.182 16.682C31.0259 15.8381 31.5 14.6935 31.5 13.5C31.5 12.3065 31.0259 11.1619 30.182 10.318C29.3381 9.47411 28.1935 9 27 9C25.8065 9 24.6619 9.47411 23.818 10.318C22.9741 11.1619 22.5 12.3065 22.5 13.5C22.5 14.6935 22.9741 15.8381 23.818 16.682C24.6619 17.5259 25.8065 18 27 18ZM11.25 22.5C10.6533 22.5 10.081 22.7371 9.65901 23.159C9.23705 23.581 9 24.1533 9 24.75C9 25.3467 9.23705 25.919 9.65901 26.341C10.081 26.7629 10.6533 27 11.25 27H42.75C43.3467 27 43.919 26.7629 44.341 26.341C44.7629 25.919 45 25.3467 45 24.75C45 24.1533 44.7629 23.581 44.341 23.159C43.919 22.7371 43.3467 22.5 42.75 22.5H11.25ZM9 33.75C9 33.1533 9.23705 32.581 9.65901 32.159C10.081 31.7371 10.6533 31.5 11.25 31.5H42.75C43.3467 31.5 43.919 31.7371 44.341 32.159C44.7629 32.581 45 33.1533 45 33.75C45 34.3467 44.7629 34.919 44.341 35.341C43.919 35.7629 43.3467 36 42.75 36H11.25C10.6533 36 10.081 35.7629 9.65901 35.341C9.23705 34.919 9 34.3467 9 33.75ZM11.25 40.5C10.6533 40.5 10.081 40.7371 9.65901 41.159C9.23705 41.581 9 42.1533 9 42.75C9 43.3467 9.23705 43.919 9.65901 44.341C10.081 44.7629 10.6533 45 11.25 45H42.75C43.3467 45 43.919 44.7629 44.341 44.341C44.7629 43.919 45 43.3467 45 42.75C45 42.1533 44.7629 41.581 44.341 41.159C43.919 40.7371 43.3467 40.5 42.75 40.5H11.25Z"
+              fill="#F9F9F9"
+            />
+          </svg>
+        </div>
       </div>
       <!-- NAV BAR -->
       <nav>
@@ -108,7 +127,6 @@
             <input type="submit" value="Subscribe" />
           </div>
         </div>
-        <span id="emailError" class="error"></span><br />
       </div>
     </div>
 

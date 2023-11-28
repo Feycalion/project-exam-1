@@ -39,6 +39,7 @@ function printData(posts, categories) {
     recipeImage.src = posts[i].yoast_head_json.og_image[0].url;
     recipeImage.classList.add("imgstyle");
     container.appendChild(recipeImage);
+    recipeImage.alt = "Photo of " + posts[i].title.rendered;
 
     // categories
     const categoriesContainer = document.createElement("div");
@@ -86,6 +87,7 @@ function printData(posts, categories) {
     recipeImage.src = posts[i].yoast_head_json.og_image[0].url;
     recipeImage.classList.add("imgstyle");
     container.appendChild(recipeImage);
+    recipeImage.alt = "Photo of " + posts[i].title.rendered;
 
     // categories
     const categoriesContainer = document.createElement("div");
@@ -133,6 +135,7 @@ function printData(posts, categories) {
     recipeImage.src = posts[i].yoast_head_json.og_image[0].url;
     recipeImage.classList.add("imgstyle");
     container.appendChild(recipeImage);
+    recipeImage.alt = "Photo of " + posts[i].title.rendered;
 
     // categories
     const categoriesContainer = document.createElement("div");

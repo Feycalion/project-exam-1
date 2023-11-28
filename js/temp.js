@@ -40,3 +40,30 @@ const recipeDesc = document.createElement("p");
 recipeDesc.innerHTML = posts[i].yoast_head_json.description;
 recipeDesc.classList.add("txtstyle");
 container.appendChild(recipeDesc);
+
+/*
+
+async function saveAndPrintData() {
+  const [posts, categories] = await getData();
+  const firstHalf = splitArray(posts).left;
+  const secondHalf = splitArray(posts).right;
+  const specificPost = firstHalf.find((element) => element.id == 110);
+  console.log(specificPost);
+
+  printData(firstHalf, categories);
+}
+
+// split half
+
+function splitArray(posts) {
+  (mid = Math.ceil(posts.length / 2)),
+    (obj = {
+      left: posts.slice(0, mid),
+      right: posts.slice(mid),
+    });
+  return obj;
+}
+
+saveAndPrintData();
+
+*/

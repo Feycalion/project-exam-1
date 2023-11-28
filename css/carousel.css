@@ -1,4 +1,5 @@
-.carousel-intro {
+.carousel-intro,
+.trending-intro {
   display: flex;
   justify-content: space-between;
   font-family: "Questrial";
@@ -12,9 +13,9 @@
 
 .view-all-btn {
   font-family: "Poppins";
-  background-color: #d2675e;
+  background-color: #ad3745;
   color: #fcfbf8;
-  border: 1px solid #d2675e;
+  border: 1px solid #ad3745;
   border-radius: 0.2rem;
   padding: 0.4rem 1rem;
   cursor: pointer;
@@ -23,8 +24,8 @@
 
 .view-all-btn:hover {
   background-color: #fcfbf8;
-  color: #d2675e;
-  border: 1px solid #d2675e;
+  color: #ad3745;
+  border: 1px solid #ad3745;
 }
 
 .line {
@@ -34,25 +35,31 @@
 
 .carousel {
   width: 100%;
+  max-width: 1200px;
   height: 486px;
   position: relative;
+  margin: 6rem auto;
+  overflow: hidden;
 }
 
-.slide {
+.slide,
+.trending-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   position: absolute;
   width: 100%;
   font-family: "Questrial";
   color: #1f1f37;
-  margin: 4rem 0;
+  margin: 2rem 0;
   transition: all 0.5s;
 }
 
-.slide img {
+.slide img,
+.trending-container img {
   border-radius: 4px;
   max-width: 300px;
   height: 200px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -87,32 +94,42 @@
   gap: 1.4rem;
 }
 
-.btn {
+.btn svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 10px;
   border: none;
-  border-radius: 50%;
   z-index: 10px;
   cursor: pointer;
-  background-color: aliceblue;
+  color: #ad3745;
   font-size: 18px;
   transition: transform 0.3s ease-in-out;
 }
 
-.btn:hover {
+.btn svg:hover {
   transform: scale(1.1);
 }
 
-.btn-prev {
-  background-color: #d2675e;
-  top: 45%;
-  left: 0%;
+.btn-prev svg {
+  top: 40%;
+  left: 2px;
 }
 
-.btn-next {
-  background-color: #d2675e;
-  top: 45%;
-  right: 0%;
+.btn-next svg {
+  top: 40%;
+  right: 2px;
 }
+
+/* Media queries */
+
+/* @media (max-width: 1024px) {
+  .carousel-intro {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+} */

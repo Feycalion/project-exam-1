@@ -35,6 +35,10 @@ footer a {
   text-decoration: none;
 }
 
+footer p {
+  font-size: 0.8rem;
+}
+
 .footerlinks {
   cursor: pointer;
 }
@@ -44,6 +48,14 @@ footer a {
   display: flex;
   gap: 1.4rem;
   cursor: pointer;
+}
+
+.mediaicons svg {
+  transition: 0.3s ease-out;
+}
+
+.mediaicons svg:hover {
+  opacity: 50%;
 }
 
 /* Media queries */

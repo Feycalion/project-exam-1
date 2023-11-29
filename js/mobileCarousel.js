@@ -1,43 +1,45 @@
-let postIds = [76, 110, 107];
-
 async function getData() {
-  const postsUrl = "https://anjakvernenes.no/wp-json/wp/v2/posts";
+  const url = `https://anjakvernenes.no/wp-json/wp/v2/posts?per_page=9&offset=0`;
+
   const categoriesUrl = "https://anjakvernenes.no/wp-json/wp/v2/categories";
 
-  const postsResponse = await fetch(`${postsUrl}?include=${postIds.join(",")}`);
-  const categoriesResponse = await fetch(categoriesUrl);
-
+  const [postsResponse, categoriesResponse] = await Promise.all([
+    fetch(url),
+    fetch(categoriesUrl),
+  ]);
   const [posts, categories] = await Promise.all([
     postsResponse.json(),
     categoriesResponse.json(),
   ]);
 
-  Data(posts, categories);
+  printDataMobile(posts, categories);
   return [posts, categories];
 }
 
 getData();
 
-function Data(posts, categories) {
-  const trendContainer = document.querySelector(".trending-wrapper");
+function printDataMobile(posts, categories) {
+  const mobileCarousel = document.querySelector(".mobile-carousel");
 
-  posts.forEach((post) => {
+  for (let i = 0; i < posts.length; i++) {
     const container = document.createElement("a");
-    container.href = `post.html?id=${post.id}`;
+    container.href = `post.html?id=${posts[i].id}`;
     container.classList.add("container");
+
+    mobileCarousel.appendChild(container);
 
     // image
     const recipeImage = document.createElement("img");
-    recipeImage.src = post.yoast_head_json.og_image[0].url;
+    recipeImage.src = posts[i].yoast_head_json.og_image[0].url;
     recipeImage.classList.add("imgstyle");
     container.appendChild(recipeImage);
-    recipeImage.alt = "Photo of " + post.title.rendered;
+    recipeImage.alt = "Photo of " + posts[i].title.rendered;
 
     // categories
     const categoriesContainer = document.createElement("div");
     categoriesContainer.classList.add("categories");
 
-    for (let categoryId of post.categories) {
+    for (let categoryId of posts[i].categories) {
       const category = getCategoryById(categories, categoryId);
       if (category) {
         const categoryElement = document.createElement("span");
@@ -50,7 +52,7 @@ function Data(posts, categories) {
 
     // title
     const recipeName = document.createElement("h1");
-    recipeName.innerText = post.title.rendered;
+    recipeName.innerText = posts[i].title.rendered;
     recipeName.classList.add("txtstyle");
     container.appendChild(recipeName);
 
@@ -60,8 +62,10 @@ function Data(posts, categories) {
     readMore.classList.add("txtstyle");
     container.appendChild(readMore);
 
-    trendContainer.appendChild(container);
-  });
+    if (i === 8) {
+      break;
+    }
+  }
 }
 
 function getCategoryById(categories, categoryId) {

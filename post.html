@@ -9,7 +9,8 @@
       content="Indulge in the culinary world of Duchess Delights - a recipe blog where elegance meets flavor. Discover a collection of exquisite recipes ranging from decadent desserts to savory delights. Elevate your home cooking with our step-by-step guides and savor the joy of creating delicious dishes. Join us on a journey of culinary sophistication and delightful surprises."
     />
 
-    <title>Duchess Delights | Delicacies Made Easy</title>
+    <title>Duchess Delights</title>
+    <script defer src="./js/skipToMain.js"></script>
     <script defer src="./js/posts.js"></script>
     <script defer src="./js/menu.js"></script>
     <script>
@@ -47,6 +48,8 @@
     />
   </head>
   <body>
+    <!-- SKIP TO MAIN -->
+    <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
     <!-- HEADER -->
     <header>
       <div class="header-content">
@@ -84,26 +87,28 @@
       </nav>
     </header>
     <main>
-      <div class="main-container">
-        <div class="data-container">
-          <h1 id="recipe-name"></h1>
-          <img
-            id="recipe-image"
-            src="post.yoast_head_json.og_image[0].url"
-            alt=""
-            class="recipe-image"
-          />
-          <p id="recipe-post"></p>
-        </div>
+      <div id="main-content">
+        <div class="main-container">
+          <div class="data-container">
+            <h1 id="recipe-name"></h1>
+            <img
+              id="recipe-image"
+              src="post.yoast_head_json.og_image[0].url"
+              alt=""
+              class="recipe-image"
+            />
+            <p id="recipe-post"></p>
+          </div>
 
-        <!-- IMAGE MODAL -->
+          <!-- IMAGE MODAL -->
 
-        <div class="modal hidden" id="imageModal">
-          <img
-            class="modal-image"
-            src="post.yoast_head_json.og_image[0].url"
-            alt=""
-          />
+          <div class="modal hidden" id="imageModal">
+            <img
+              class="modal-image"
+              src="post.yoast_head_json.og_image[0].url"
+              alt=""
+            />
+          </div>
         </div>
       </div>
       <!-- NEWSLETTER -->

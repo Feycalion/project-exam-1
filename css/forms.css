@@ -2,9 +2,9 @@
   margin-top: 12rem;
   display: flex;
   gap: 8rem;
-  font-family: "Questrial";
+  font-family: "Questrial", sans-serif;
   font-size: 1rem;
-  color: #1f1f37;
+  color: var(--primary-text);
 }
 
 .names {
@@ -49,15 +49,15 @@
 
 input,
 textarea {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   height: 40px;
-  border: 1px solid #ad3745;
+  border: 1px solid var(--primary-red);
   padding: 8px;
   border-radius: 0.2rem;
 }
 
 input:focus {
-  outline: 1.4px solid #ad3745;
+  outline: 1.4px solid var(--primary-red);
 }
 
 textarea {
@@ -66,26 +66,26 @@ textarea {
 }
 
 textarea:focus {
-  outline: 1.4px solid #ad3745;
+  outline: 1.4px solid var(--primary-red);
 }
 
 ::placeholder {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   color: #9999b1;
 }
 
 input[type="submit"] {
-  background-color: #ad3745;
-  color: #fcfbf8;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
   padding: 8px 12px;
   cursor: pointer;
   transition: 0.4s;
 }
 
 input[type="submit"]:hover {
-  background-color: #fcfbf8;
-  color: #ad3745;
-  border: 1px solid #ad3745;
+  background-color: var(--primary-white);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
 }
 
 .error {

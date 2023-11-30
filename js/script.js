@@ -1,6 +1,3 @@
-// const url = "http://flower-power.local/wp-json/wp/v2/posts?per_page=20";
-// const categoriesUrl = "http://flower-power.local/wp-json/wp/v2/categories";
-
 let offsetValue = 0;
 let postLimit = 9;
 
@@ -18,6 +15,8 @@ async function getData() {
     categoriesResponse.json(),
   ]);
   printData(posts, categories);
+  let spinnerContainer = document.getElementById("spinner-container");
+  spinnerContainer.style.display = "none";
   return [posts, categories];
 }
 

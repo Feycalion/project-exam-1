@@ -15,9 +15,11 @@ function postDetails(post) {
   const recipeImage = document.getElementById("recipe-image");
   const recipePost = document.getElementById("recipe-post");
 
+  document.title = "Duchess Delights | " + post.title.rendered;
+
   recipeName.innerText = post.title.rendered;
   recipeImage.src = post.yoast_head_json.og_image[0].url;
-  recipeImage.alt = "Photo of " + post.title.rendered;
+  recipeImage.alt = post.title.rendered;
   recipePost.innerHTML = post.content.rendered;
 
   recipeImage.classList.add("imgstyle");

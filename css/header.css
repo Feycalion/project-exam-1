@@ -1,5 +1,5 @@
 header {
-  background-color: #ad3745;
+  background-color: var(--primary-red);
 }
 
 header h1 {
@@ -16,10 +16,10 @@ header h1 {
 }
 
 header div a {
-  font-family: "Questrial";
+  font-family: "Questrial", sans-serif;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
-  color: #fcfbf8;
+  color: var(--primary-white);
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -27,15 +27,15 @@ header div a {
 }
 
 header div p {
-  background-color: #ad3745;
-  color: #fcfbf8;
+  background-color: var(--primary-red);
+  color: var(--primary-white);
   font-size: 1.2rem;
 }
 header nav {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  background-color: #fcfbf8;
+  background-color: var(--primary-white);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ nav ul {
 }
 
 nav li {
-  color: #ad3745;
+  color: var(--primary-red);
   transition: 0.6s;
 }
 
@@ -60,7 +60,7 @@ nav li:hover {
 
 nav a {
   text-decoration: none;
-  color: #ad3745;
+  color: var(--primary-red);
   padding: 0px 1rem;
 }
 
@@ -107,7 +107,6 @@ nav a {
     left: 0;
     width: 100%;
     z-index: 1;
-    opacity: 96%;
   }
 
   header nav ul {

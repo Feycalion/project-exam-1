@@ -67,3 +67,6 @@ function splitArray(posts) {
 saveAndPrintData();
 
 */
+
+var w = window.innerWidth;
+var h = window.innerHeight;

@@ -3,17 +3,19 @@ async function getData() {
 
   const categoriesUrl = "https://anjakvernenes.no/wp-json/wp/v2/categories";
 
-  const [postsResponse, categoriesResponse] = await Promise.all([
-    fetch(url),
-    fetch(categoriesUrl),
-  ]);
-  const [posts, categories] = await Promise.all([
-    postsResponse.json(),
-    categoriesResponse.json(),
-  ]);
+  if (isMobile()) {
+    const [postsResponse, categoriesResponse] = await Promise.all([
+      fetch(url),
+      fetch(categoriesUrl),
+    ]);
+    const [posts, categories] = await Promise.all([
+      postsResponse.json(),
+      categoriesResponse.json(),
+    ]);
 
-  printDataMobile(posts, categories);
-  return [posts, categories];
+    printDataMobile(posts, categories);
+    return [posts, categories];
+  }
 }
 
 getData();
@@ -70,4 +72,8 @@ function printDataMobile(posts, categories) {
 
 function getCategoryById(categories, categoryId) {
   return categories.find((category) => category.id === categoryId);
+}
+
+function isMobile() {
+  return window.innerWidth < 1024;
 }

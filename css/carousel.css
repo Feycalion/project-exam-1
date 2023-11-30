@@ -8,10 +8,6 @@
   white-space: nowrap;
 }
 
-.trending-intro {
-  margin: 0 1rem;
-}
-
 .view-all-btn {
   font-family: "Poppins";
   background-color: #ad3745;
@@ -73,6 +69,11 @@
   justify-content: center;
   gap: 0.6rem;
   color: #1f1f37;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
 }
 
 .container span {
@@ -137,7 +138,6 @@
   gap: 1rem;
   padding-left: 1rem;
   padding: 1rem;
-
   scrollbar-width: none;
 }
 
@@ -163,7 +163,8 @@
   .carousel {
     display: none;
   }
-  .carousel-intro {
+  .carousel-intro,
+  .trending-intro {
     margin: 0 1rem;
   }
   .line {
@@ -182,7 +183,7 @@
     scrollbar-width: none;
   }
 
-  .trendidng-wrapper::-webkit-scrollbar {
+  .trending-wrapper::-webkit-scrollbar {
     display: none;
   }
 

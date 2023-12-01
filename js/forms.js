@@ -1,13 +1,10 @@
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    // Prevent the form from submitting
     event.preventDefault();
 
-    // Clear previous error messages
     clearErrors();
 
-    // Validate the form inputs
     if (
       !validateFirstName() ||
       !validateLastName() ||

@@ -28,7 +28,7 @@
 
 .line {
   border: 1px solid #5d5e76;
-  margin: 1rem 3rem;
+  margin: 0.4rem 3rem 3rem 3rem;
 }
 
 .carousel {
@@ -42,8 +42,9 @@
 
 .slide,
 .trending-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
   position: absolute;
   width: 100%;
   font-family: "Questrial", sans-serif;
@@ -54,7 +55,7 @@
 .slide img,
 .trending-container img {
   border-radius: 4px;
-  max-width: 300px;
+  max-width: 324px;
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -115,12 +116,12 @@
 }
 
 .btn-prev {
-  top: 32%;
+  top: 36%;
   left: 2px;
 }
 
 .btn-next {
-  top: 32%;
+  top: 36%;
   right: 2px;
 }
 
@@ -151,6 +152,7 @@
     font-family: "Questrial", sans-serif;
     width: 100%;
     display: flex;
+    justify-content: start;
     overflow-x: scroll;
     gap: 1rem;
     padding-left: 1rem;

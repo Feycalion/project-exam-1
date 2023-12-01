@@ -4,6 +4,17 @@ var isEmailValid = false;
 var isSubjectValid = false;
 var isMessageValid = false;
 
+const firstName = document.querySelector("#firstName");
+firstName.onblur = () => validateOnBlurFirstName(firstName.value);
+const lastName = document.querySelector("#lastName");
+lastName.onblur = () => validateOnBlurLastName(lastName.value);
+const email = document.querySelector("#email");
+email.onblur = () => validateOnBlurEmail(email.value);
+const subject = document.querySelector("#subject");
+subject.onblur = () => validateOnBlurSubject(subject.value);
+const message = document.querySelector("#message");
+message.onblur = () => validateOnBlurMessage(message.value);
+
 function clearInputValues() {
   document.getElementById("firstName").value = "";
   document.getElementById("lastName").value = "";

@@ -1,8 +1,8 @@
-var isFirstNameValid = false;
-var isLastNameValid = false;
-var isEmailValid = false;
-var isSubjectValid = false;
-var isMessageValid = false;
+let isFirstNameValid = false;
+let isLastNameValid = false;
+let isEmailValid = false;
+let isSubjectValid = false;
+let isMessageValid = false;
 
 const firstName = document.querySelector("#firstName");
 firstName.onblur = () => validateOnBlurFirstName(firstName.value);
@@ -28,7 +28,7 @@ function resetElementInnerText(element) {
 }
 
 function validateOnBlurFirstName(value) {
-  var element = document.getElementById("firstNameError");
+  let element = document.getElementById("firstNameError");
   if (value.length > 0 && value.length < 5) {
     element.innerText = "First name must be more than 5 characters.";
     isFirstNameValid = false;
@@ -39,7 +39,7 @@ function validateOnBlurFirstName(value) {
 }
 
 function validateOnBlurLastName(value) {
-  var element = document.getElementById("firstNameError");
+  let element = document.getElementById("firstNameError");
   if (value.length > 0 && value.length < 5) {
     element.innerText = "Last name must be more than 5 characters.";
     isLastNameValid = false;
@@ -50,10 +50,10 @@ function validateOnBlurLastName(value) {
 }
 
 function validateOnBlurEmail(value) {
-  var element = document.getElementById("emailError");
+  let element = document.getElementById("emailError");
 
   if (value.length > 0) {
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
       element.innerText = "Enter a valid email address.";
       isEmailValid = false;
@@ -68,7 +68,7 @@ function validateOnBlurEmail(value) {
 }
 
 function validateOnBlurSubject(value) {
-  var element = document.getElementById("subjectError");
+  let element = document.getElementById("subjectError");
   if (value.length > 0 && value.length < 15) {
     element.innerText = "Subject must be more than 15 characters.";
     isSubjectValid = false;
@@ -79,7 +79,7 @@ function validateOnBlurSubject(value) {
 }
 
 function validateOnBlurMessage(value) {
-  var element = document.getElementById("messageError");
+  let element = document.getElementById("messageError");
   if (value.length > 0 && value.length < 25) {
     element.innerText = "Message must be more than 25 characters.";
     isMessageValid = false;

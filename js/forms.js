@@ -1,78 +1,99 @@
+var isFirstNameValid = false;
+var isLastNameValid = false;
+var isEmailValid = false;
+var isSubjectValid = false;
+var isMessageValid = false;
+
+function clearInputValues() {
+  document.getElementById("firstName").value = "";
+  document.getElementById("lastName").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
+}
+
+function resetElementInnerText(element) {
+  element.innerText = "";
+}
+
+function validateOnBlurFirstName(value) {
+  var element = document.getElementById("firstNameError");
+  if (value.length > 0 && value.length < 5) {
+    element.innerText = "First name must be more than 5 characters.";
+    isFirstNameValid = false;
+  } else if (value.length > 0 && value.length > 5) {
+    resetElementInnerText(element);
+    isFirstNameValid = true;
+  }
+}
+
+function validateOnBlurLastName(value) {
+  var element = document.getElementById("firstNameError");
+  if (value.length > 0 && value.length < 5) {
+    element.innerText = "Last name must be more than 5 characters.";
+    isLastNameValid = false;
+  } else if (value.length > 0 && value.length > 5) {
+    resetElementInnerText(element);
+    isLastNameValid = true;
+  }
+}
+
+function validateOnBlurEmail(value) {
+  var element = document.getElementById("emailError");
+
+  if (value.length > 0) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      element.innerText = "Enter a valid email address.";
+      isEmailValid = false;
+    } else {
+      resetElementInnerText(element);
+      isEmailValid = true;
+    }
+  } else {
+    resetElementInnerText(element);
+    isEmailValid = false;
+  }
+}
+
+function validateOnBlurSubject(value) {
+  var element = document.getElementById("subjectError");
+  if (value.length > 0 && value.length < 15) {
+    element.innerText = "Subject must be more than 15 characters.";
+    isSubjectValid = false;
+  } else if (value.length > 0 && value.length > 15) {
+    resetElementInnerText(element);
+    isSubjectValid = true;
+  }
+}
+
+function validateOnBlurMessage(value) {
+  var element = document.getElementById("messageError");
+  if (value.length > 0 && value.length < 25) {
+    element.innerText = "Message must be more than 25 characters.";
+    isMessageValid = false;
+  } else if (value.length > 0 && value.length > 25) {
+    resetElementInnerText(element);
+    isMessageValid = true;
+  }
+}
+
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    clearErrors();
-
     if (
-      !validateFirstName() ||
-      !validateLastName() ||
-      !validateEmail() ||
-      !validateSubject() ||
-      !validateMessage()
+      !isFirstNameValid ||
+      !isLastNameValid ||
+      !isEmailValid ||
+      !isSubjectValid ||
+      !isMessageValid
     ) {
       return;
     }
 
-    alert("Form submitted successfully!");
+    clearInputValues();
+
+    alert("Message sent!");
   });
-
-function validateFirstName() {
-  var firstName = document.getElementById("firstName").value;
-  if (firstName.length < 5) {
-    document.getElementById("firstNameError").innerText =
-      "First name must be more than 5 characters.";
-    return false;
-  }
-  return true;
-}
-
-function validateLastName() {
-  var lastName = document.getElementById("lastName").value;
-  if (lastName.length < 5) {
-    document.getElementById("firstNameError").innerText =
-      "Last name must be more than 5 characters.";
-    return false;
-  }
-  return true;
-}
-
-function validateEmail() {
-  var email = document.getElementById("email").value;
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    document.getElementById("emailError").innerText =
-      "Enter a valid email address.";
-    return false;
-  }
-  return true;
-}
-
-function validateSubject() {
-  var subject = document.getElementById("subject").value;
-  if (subject.length < 15) {
-    document.getElementById("subjectError").innerText =
-      "Subject must be more than 15 characters.";
-    return false;
-  }
-  return true;
-}
-
-function validateMessage() {
-  var message = document.getElementById("message").value;
-  if (message.length < 25) {
-    document.getElementById("messageError").innerText =
-      "Message must be more than 25 characters.";
-    return false;
-  }
-  return true;
-}
-
-function clearErrors() {
-  document.getElementById("firstNameError").innerText = "";
-  document.getElementById("lastNameError").innerText = "";
-  document.getElementById("emailError").innerText = "";
-  document.getElementById("subjectError").innerText = "";
-  document.getElementById("messageError").innerText = "";
-}

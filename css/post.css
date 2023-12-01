@@ -54,8 +54,8 @@
 }
 
 .modal-image {
-  min-width: 50%;
-  min-height: 50%;
+  width: 90%;
+  max-width: 1064px;
 }
 
 .hidden {
@@ -89,9 +89,10 @@
   .modal {
     gap: 1rem;
   }
+}
 
-  .modal-image {
-    min-width: 70%;
-    min-height: 70%;
+@media (max-width: 840px) {
+  .modal {
+    gap: 1rem;
   }
 }

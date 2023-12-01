@@ -24,7 +24,6 @@ getData();
 
 function printData(posts, categories) {
   const dataContainer = document.querySelector(".data-container");
-  console.log(posts);
 
   for (let i = 0; i < posts.length; i++) {
     const container = document.createElement("a");

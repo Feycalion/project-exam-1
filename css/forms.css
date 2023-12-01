@@ -60,11 +60,6 @@ input:focus {
   outline: 1.4px solid var(--primary-red);
 }
 
-textarea {
-  resize: none;
-  min-height: 120px;
-}
-
 textarea:focus {
   outline: 1.4px solid var(--primary-red);
 }

@@ -22,7 +22,7 @@ I was tasked with creating a blog site. I choose to create a recipe blog showcas
 Clone the repo:
 
 ```bash
-git clone https://github.com/Feycalion/semester-project-1.git
+git clone https://github.com/Feycalion/project-exam-1.git
 ```
 
 ### Run

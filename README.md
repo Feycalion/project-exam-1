@@ -2,14 +2,11 @@
 
 ![duchess](https://github.com/Feycalion/semester-project-1/assets/90476295/0e7b8380-d572-4cc3-a77d-c3afd3b9d1db)
 
+For this assignment I had a month to design and build a website for a fictional blog, using everything I had learned during my first year of study.
 
 ## Description
 
-For this assignment I had a month to design and build a website for a fictional blog, using everything I had learned during my first year of study.
-
-## Assignment Brief
-
-I was tasked with creating a blog site. I choose to create a recipe blog showcasing dessert recipes.
+I was tasked with creating a blog site. I chose to create a recipe blog showcasing dessert recipes.
 
 ## Built With
 
